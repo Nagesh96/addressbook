@@ -19,6 +19,11 @@ pipeline{
                 echo 'Run the test cases'
                 sh 'mvn test'
             }
+            post{
+                always{
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
             
         }
 
