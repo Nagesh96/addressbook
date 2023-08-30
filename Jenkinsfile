@@ -28,7 +28,7 @@ pipeline{
         }
 
         stage('Package') {
-            agent {label 'linux-slave'}
+            agent {label 'linux_slave'}
             steps{
                 sh 'mvn package'
             }
